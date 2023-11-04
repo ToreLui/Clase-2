@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simple</title>
+    <style>
+        input {
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            width: 50px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simple</h1>
+    <input id="operand1" type="number" placeholder="Operando 1">
+    <input id="operand2" type="number" placeholder="Operando 2">
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <button id="multiply">*</button>
+    <button id="divide">/</button>
+    <p>Resultado: <span id="result">0</span></p>
+
+    <script>
+        const operand1Input = document.getElementById("operand1");
+        const operand2Input = document.getElementById("operand2");
+        const addBtn = document.getElementById("add");
+        const subtractBtn = document.getElementById("subtract");
+        const multiplyBtn = document.getElementById("multiply");
+        const divideBtn = document.getElementById("divide");
+        const resultSpan = document.getElementById("result");
+
+        addBtn.addEventListener("click", () => {
+            const operand1 = parseFloat(operand1Input.value);
+            const operand2 = parseFloat(operand2Input.value);
+            const result = operand1 + operand2;
+            resultSpan.textContent = result;
+        });
+
+        subtractBtn.addEventListener("click", () => {
+            const operand1 = parseFloat(operand1Input.value);
+            const operand2 = parseFloat(operand2Input.value);
+            const result = operand1 - operand2;
+            resultSpan.textContent = result;
+        });
+
+        multiplyBtn.addEventListener("click", () => {
+            const operand1 = parseFloat(operand1Input.value);
+            const operand2 = parseFloat(operand2Input.value);
+            const result = operand1 * operand2;
+            resultSpan.textContent = result;
+        });
+
+        divideBtn.addEventListener("click", () => {
+            const operand1 = parseFloat(operand1Input.value);
+            const operand2 = parseFloat(operand2Input.value);
+            if (operand2 === 0) {
+                resultSpan.textContent = "Error: División por cero";
+            } else {
+                const result = operand1 / operand2;
+                resultSpan.textContent = result;
+            }
+        });
+    </script>
+</body>
+</html>

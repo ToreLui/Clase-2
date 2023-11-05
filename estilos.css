@@ -1,0 +1,73 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#contenedor
+{
+    height: 60vh;
+    width: 50vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#operandos
+{
+    height: 20vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+#operaciones
+{
+    height: 30vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#total
+{
+    height: 30vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input, button
+{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+
+label
+{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+#total input
+{
+    padding: 10px;
+}
+
+#operandos input
+{
+    padding: 8px 4px;
+    background-color: rgb(110, 107, 107);
+    color: aliceblue;
+    font-weight: 800;
+}
